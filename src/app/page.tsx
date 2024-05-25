@@ -9,7 +9,7 @@ import cofBr from "../../public/main_page_images/cfp1tu.png";
 export default function Home() {
   return (
     <main>
-      {/*<div className={styles.GHOST}></div>*/}
+      <div className={styles.GHOST}></div>
       <div className={styles.gradient_bg}>
         <div className={styles.title_flex}>
           <p className={styles.motto}>Specialty Coffee and Tea from all around the Earth📍</p>
