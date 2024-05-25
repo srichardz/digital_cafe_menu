@@ -8,7 +8,7 @@ import cofBr from "../../public/main_page_images/cfp1tu.png";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
       <div className={styles.gradient_bg}>
         <div className={styles.title_flex}>
