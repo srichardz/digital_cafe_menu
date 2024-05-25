@@ -14,8 +14,8 @@
 }
 
 .btn_icon {
-    position: relative;
-    bottom: 6em;
+    position: absolute;
+    bottom: 3em;
     height: 7em;
     width: 5em;
     background-size: 2.5em;

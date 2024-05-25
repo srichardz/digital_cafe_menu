@@ -16,6 +16,7 @@ export default function Home() {
           <h1 className={styles.main_title}>Curiosity Coffee & Tea</h1>
           <p className={styles.sub_title}>Digital Menu</p>
         </div>
+        <div className={styles.spacer}></div>
         <div className={styles.btn_flex}>
           <StartOrderBtn />
         </div>
@@ -24,9 +25,9 @@ export default function Home() {
           <RectBtn logo_url={2}/>
           <RectBtn logo_url={3}/>
         </div>
+      </div>
         <img src={teaBr.src} className={styles.tea_branch}></img>
         <img src={cofBr.src} className={styles.cof_branch}></img>
-      </div>
     </main>
   );
 }
