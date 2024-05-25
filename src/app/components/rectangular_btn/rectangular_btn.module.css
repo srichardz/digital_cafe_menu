@@ -4,6 +4,9 @@
     border-radius: 28px;
     border:0px;
     background-color: #F6F5F4;
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow:  10px 10px 20px #c5d6eb,
                  -10px -10px 20px #ffffff;
 }
@@ -18,8 +21,5 @@
     bottom: 3em;
     height: 7em;
     width: 5em;
-    background-size: 2.5em;
-    background-position: center;
-    background-repeat: no-repeat;
     pointer-events: none;
 }

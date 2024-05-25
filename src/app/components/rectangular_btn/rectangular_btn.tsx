@@ -19,9 +19,8 @@ const RectBtn = ({logo_url} : {logo_url : number}) => {
 
     return (
         <div>
-            <button className={styles.btn} onClick={() => console.log('working')}>
+            <button className={styles.btn} onClick={() => console.log('working')} style={{backgroundImage: 'url(' + (logo.src) + ')'}}>
             </button>
-            <div className={styles.btn_icon} style={{backgroundImage: 'url(' + (logo.src) + ')'}}></div>
         </div>
     )
 }
