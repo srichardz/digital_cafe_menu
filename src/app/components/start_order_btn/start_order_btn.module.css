@@ -1,0 +1,18 @@
+.btn {
+    width:80vw;
+    height:8vh;
+    font-size: 60px;
+    font-weight: 700;
+    color: #33433c;
+    border-radius: 60px;
+    border:0px;
+    background-color: #F6F5F4;
+    box-shadow:  10px 10px 20px #c5d6eb,
+                 -10px -10px 20px #ffffff;
+}
+
+.btn:active {
+    box-shadow: inset 10px 10px 20px #c5d6eb,
+                inset -10px -10px 20px #ffffff;
+}
+

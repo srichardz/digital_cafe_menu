@@ -1,0 +1,82 @@
+.gradient_bg {
+    background: linear-gradient(#3584E4 0%,#F6F5F4 50%, #F6F5F4 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_flex {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 22.3vh;
+}
+
+.btn_flex {
+    display:flex;
+    width: 80vw;
+    flex-wrap: wrap;
+    padding-top: 37vh;
+}
+
+.btns_flex {
+    display:flex;
+    justify-content: center;
+    column-gap: 6.25vw;
+    width: 80vw;
+    flex-wrap: wrap;
+    padding-top: 6vh;
+}
+
+.tea_branch {
+    position: absolute;
+    left: -16vw;
+    top: -2vh;
+    scale: 60%;
+}
+
+.cof_branch {
+    position: absolute;
+    right: -23vw;
+    top:   26vh;
+    scale: 73%;
+}
+
+.GHOST {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/main_page_images/Main_page.png");
+    z-index: 100;
+    touch-action: none;
+    opacity: 0%;
+
+}
+
+
+.GHOST:hover {
+    opacity: 40%;
+
+}
+
+
+
+
+.motto {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.main_title {
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.sub_title {
+    font-size: 50px;
+    font-weight: 300;
+}
