@@ -4,9 +4,19 @@ import styles from "./page.module.css";
 import teaBr from "../../public/main_page_images/teabr.png";
 import cofBr from "../../public/main_page_images/cfp1tu.png";
 
+import { dbConnect } from '@/app/lib/db';
+import { NextResponse } from "next/server";
 
+
+async function GET() {
+  const con = await dbConnect();
+  return new NextResponse('connected');
+}
 
 export default function Home() {
+
+  GET()
+  
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
