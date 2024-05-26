@@ -7,16 +7,28 @@ import cofBr from "../../public/main_page_images/cfp1tu.png";
 import { dbConnect } from '@/app/lib/db';
 import { NextResponse } from "next/server";
 
+import Order from './model/Order';
 
 async function GET() {
   const con = await dbConnect();
+  console.log("abc");
+
+  const article = new Order({
+    item: "this-is-a-test",
+    paid: false
+  });
+  
+  // Insert the article in our MongoDB database
+  await article.save();
+  
+
   return new NextResponse('connected');
 }
 
 export default function Home() {
 
   GET()
-  
+
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
