@@ -4,31 +4,31 @@ import styles from "./page.module.css";
 import teaBr from "../../public/main_page_images/teabr.png";
 import cofBr from "../../public/main_page_images/cfp1tu.png";
 
-import { dbConnect } from '@/app/lib/db';
-import { NextResponse } from "next/server";
-
-import Order from './model/Order';
-
-async function GET() {
-  const con = await dbConnect();
-  console.log("abc");
-
-  const article = new Order({
-    item: "this-is-a-test",
-    paid: false
-  });
-  
-  // Insert the article in our MongoDB database
-  await article.save();
-  
-
-  return new NextResponse('connected');
-}
+import { POST, GET, CreateCoffeeDto } from "./api/coffees/route"
+import { NextRequest } from "next/server";
 
 export default function Home() {
 
-  GET()
-  // TODO: 
+  const createCoffeeDTO: CreateCoffeeDto = {
+    drink_name: "example",
+    allergen_info: 0,
+    price: 0,
+    description: "pp",
+  };
+  
+  const makeApiCall = async () => {
+    try {
+      await fetch(process.env.URL + '/api/coffees/', {
+      method: 'POST',
+      body: JSON.stringify(createCoffeeDTO)
+    })
+    } catch(e) {
+      console.log(e)
+    }
+  }
+
+  makeApiCall();
+
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
         <div className={styles.spacer}></div>
         <div className={styles.btn_flex}>
-          <StartOrderBtn />
+          <StartOrderBtn/>
         </div>
         <div className={styles.btns_flex}>
           <RectBtn logo_url={1}/>
