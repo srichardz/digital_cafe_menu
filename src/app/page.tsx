@@ -28,7 +28,7 @@ async function GET() {
 export default function Home() {
 
   GET()
-
+  // TODO: 
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
