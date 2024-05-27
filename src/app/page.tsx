@@ -43,9 +43,9 @@ export default function Home() {
           <StartOrderBtn/>
         </div>
         <div className={styles.btns_flex}>
-          <RectBtn logo_url={1}/>
-          <RectBtn logo_url={2}/>
-          <RectBtn logo_url={3}/>
+          <RectBtn logo_url={1} onClick={()=>console.log(0)}/>
+          <RectBtn logo_url={2} onClick={()=>console.log(0)}/>
+          <RectBtn logo_url={3} onClick={()=>console.log(0)}/>
         </div>
       </div>
       <img src={teaBr.src} className={styles.tea_branch}></img>
