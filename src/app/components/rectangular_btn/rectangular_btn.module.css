@@ -3,7 +3,7 @@
     height:6em;
     border-radius: 28px;
     border:0px;
-    background-color: #F6F5F4;
+    background-color: #EBEBEB;
     background-size: 2.5em;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,12 +14,4 @@
 .btn:active {
     box-shadow: inset 10px 10px 20px #c5d6eb,
                 inset -10px -10px 20px #ffffff;
-}
-
-.btn_icon {
-    position: absolute;
-    bottom: 3em;
-    height: 7em;
-    width: 5em;
-    pointer-events: none;
 }

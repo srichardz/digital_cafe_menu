@@ -1,3 +1,67 @@
 .bg {
-    background-color: #ebebeb;
+    background-color: #EBEBEB;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.spacer {
+    display: flex;
+    flex-grow: 1;
+}
+
+.btns_flex {
+    display:flex;
+    justify-content: center;
+    column-gap: 2em;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    padding-bottom:8em;
+}
+
+.order_details {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #909090;
+    text-decoration: underline;
+    padding-top: 3em;
+    display: flex;
+}
+
+.order_conf_text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #909090;
+}
+
+.pm_type {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #909090;
+    opacity: 100%;
+}
+
+.cash_pm {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #909090;
+    opacity: 0%;
+}
+
+.ccard_pm {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #909090;
+    opacity: 0%;
+}
+
+.btc_pm {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #909090;
+    opacity: 0%;
 }

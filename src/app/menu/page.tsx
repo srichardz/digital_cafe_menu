@@ -2,6 +2,7 @@
 
 import styles from "./page.module.css";
 import { useState, useEffect } from 'react';
+import PgTtl from "../components/page_title/page_title";
 
 import cof_im from "../../../public/cofft1.png"
 
@@ -37,7 +38,7 @@ export default function Menu() {
     <main>
         {<div className={styles.GHOST}></div>}
         <div className={styles.bg}>
-            <div><h2 className={styles.firstc}>Curiosity · Digital menu</h2></div>
+            <PgTtl />
             <div className={styles.spacer}></div>
             {coffees.map(item => ( 
                 <div className={styles.cof}>
