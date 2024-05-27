@@ -46,7 +46,7 @@ export default function Home() {
       <div className={styles.bg}>
         {selected_payment}
         <div className={styles.spacer}></div>
-        <p className={styles.pm_type}>Please select payment type!</p>
+        <p className={styles.order_conf_text}>Please select payment type!</p>
         <p className={styles.order_conf_text}>Total: {0} EUR</p>
         <div className={styles.btns_flex}>
           <RectBtn logo_url={4} onClick={() => btn_handler("cash_")}/>

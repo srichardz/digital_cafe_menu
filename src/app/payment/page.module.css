@@ -37,31 +37,3 @@
     font-weight: 600;
     color: #909090;
 }
-
-.pm_type {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #909090;
-    opacity: 100%;
-}
-
-.cash_pm {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #909090;
-    opacity: 0%;
-}
-
-.ccard_pm {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #909090;
-    opacity: 0%;
-}
-
-.btc_pm {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #909090;
-    opacity: 0%;
-}
