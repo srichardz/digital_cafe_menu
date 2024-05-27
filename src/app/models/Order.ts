@@ -1,13 +1,13 @@
 import { model, models, Schema } from 'mongoose';
 
-export interface Coffee {
+export interface Order {
     drink_name: string;
     allergen_info: number;
     price: number;
     description: string;
 }
 
-const CoffeeSchema = new Schema<Coffee>({
+const OrderSchema = new Schema<Order>({
   drink_name: {
     type: String,
     required: [true, "Please provide a name for this coffee."],
@@ -24,5 +24,5 @@ const CoffeeSchema = new Schema<Coffee>({
   }
 });
 
-const Coffee = models.Coffee || model('Coffee', CoffeeSchema);
-export default Coffee;
+const Order = models.Order || model('Order', OrderSchema);
+export default Order;

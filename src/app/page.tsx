@@ -9,6 +9,7 @@ import { NextRequest } from "next/server";
 
 export default function Home() {
 
+  {/*
   const createCoffeeDTO: CreateCoffeeDto = {
     drink_name: "example",
     allergen_info: 0,
@@ -26,8 +27,7 @@ export default function Home() {
       console.log(e)
     }
   }
-
-  makeApiCall();
+*/}
 
   return (
     <main className={styles.mn}>
@@ -48,8 +48,8 @@ export default function Home() {
           <RectBtn logo_url={3}/>
         </div>
       </div>
-        <img src={teaBr.src} className={styles.tea_branch}></img>
-        <img src={cofBr.src} className={styles.cof_branch}></img>
+      <img src={teaBr.src} className={styles.tea_branch}></img>
+      <img src={cofBr.src} className={styles.cof_branch}></img>
     </main>
   );
 }

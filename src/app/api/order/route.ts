@@ -1,9 +1,9 @@
 import { HttpStatusCode } from 'axios';
 import dbConnect from '../../lib/dbConnect';
-import Coffee from '../../models/Coffee';
+import Order from '../../models/Order';
 import { NextRequest, NextResponse } from 'next/server';
 
-export type CreateCoffeeDto = {
+export type CreateOrderDto = {
     drink_name: string;
     allergen_info: number;
     price: number;
@@ -13,11 +13,11 @@ export type CreateCoffeeDto = {
 export async function POST(req: NextRequest) {
     try {
         await dbConnect();
-        const body: CreateCoffeeDto = await req.json();
+        const body: CreateOrderDto = await req.json();
         if (body.drink_name) {
-            const product = await Coffee.create(body);
+            const product = await Order.create(body);
             return NextResponse.json(
-                { product, message: 'Your product has been created' },
+                { product, message: 'Your order has been created' },
                 { status: HttpStatusCode.Created },
             );
         }
@@ -29,9 +29,11 @@ export async function POST(req: NextRequest) {
 export async function GET() {
     try {
         await dbConnect();
-        const coffees = await Coffee.find();
-        return NextResponse.json({ data: coffees });
+        const orders = await Order.find();
+        return NextResponse.json({ data: orders });
     } catch (error) {
         return NextResponse.json({ error });
     }
 }
+
+// TODO: this is a template copied from coffees, have to design order template and implement to main page start order btn, same with Order.ts

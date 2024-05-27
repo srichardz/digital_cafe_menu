@@ -1,0 +1,72 @@
+.bg {
+    background-color: #F7F6F5;
+    color: #716F6B;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.spacer {
+    width: 100vw;
+    padding-top:3.3em;
+}
+
+.firstc {
+    width: 100vw;
+    text-align: center;
+    font-size: 1.15rem;
+    padding-top: 0.5em;
+    padding-bottom: 3.3em;
+    position: fixed;
+}
+
+.cof {
+    width: 32vw;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 1.65em;
+    padding-bottom: 2em;
+}
+
+.coffee_name {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.coffee_desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+.GHOST {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/coffee.png");
+    background-size: 100%;
+    z-index: 100;
+    touch-action: none;
+    opacity: 0%;
+
+}
+
+.GHOST:hover {
+    opacity: 60%;
+
+}
+
+.circle {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 100;
+}
