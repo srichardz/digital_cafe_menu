@@ -7,11 +7,29 @@
     background-size: 2.5em;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow:  10px 10px 20px #c5d6eb,
-                 -10px -10px 20px #ffffff;
+    box-shadow: 10px 10px 20px #c5d6eb,
+               -10px -10px 20px #ffffff;
+    animation: fade_ .3s;
 }
 
 .btn:active {
     box-shadow: inset 10px 10px 20px #c5d6eb,
                 inset -10px -10px 20px #ffffff;
+    animation: fade_out .3s;
+}
+
+@keyframes fade_ {
+    0% { box-shadow: inset 10px 10px 20px #c5d6eb,
+                inset -10px -10px 20px #ffffff; }
+    50% { box-shadow: none; }
+    100% { box-shadow: 10px 10px 20px #c5d6eb,
+                      -10px -10px 20px #ffffff;}
+}
+
+@keyframes fade_out {
+    0% { box-shadow: 10px 10px 20px #c5d6eb,
+        -10px -10px 20px #ffffff;}
+    50% { box-shadow: none; }
+    100% { box-shadow: inset 10px 10px 20px #c5d6eb,
+        inset -10px -10px 20px #ffffff; }
 }
