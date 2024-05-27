@@ -11,7 +11,7 @@ type Coffee = {
 }
 
 export default function Menu() {
-    const [coffees, setCoffees] = useState([]);
+    const [coffees, setCoffees] = useState<any[]>([]);;
     const [error, setError] = useState(null);
     
     useEffect(() => {
