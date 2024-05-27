@@ -1,3 +1,5 @@
+'use client'
+
 import StartOrderBtn from "./components/start_order_btn/start_order_btn";
 import RectBtn from "./components/rectangular_btn/rectangular_btn";
 import styles from "./page.module.css";
