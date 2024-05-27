@@ -9,6 +9,12 @@
     background-color: #F6F5F4;
     box-shadow:  10px 10px 20px #c5d6eb,
                  -10px -10px 20px #ffffff;
+
+    padding-left: 4.4em;
+    padding-right: 4.4em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    text-decoration: none;
 }
 
 .btn:active {

@@ -1,5 +1,6 @@
 .bg {
     background-color: #F7F6F5;
+    position: fixed;
     color: #716F6B;
     height: 100vh;
     display: flex;
@@ -11,7 +12,7 @@
 
 .spacer {
     width: 100vw;
-    padding-top:3.3em;
+    padding-top:6em;
 }
 
 .firstc {
@@ -19,16 +20,15 @@
     text-align: center;
     font-size: 1.15rem;
     padding-top: 0.5em;
-    padding-bottom: 3.3em;
     position: fixed;
 }
 
 .cof {
-    width: 32vw;
+    width: 46vw;
     text-align: justify;
     text-justify: inter-word;
     padding-left: 1.65em;
-    padding-bottom: 2em;
+    padding-bottom: 1.5em;
 }
 
 .coffee_name {
@@ -62,11 +62,23 @@
 }
 
 .circle {
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
+    position: fixed;
     display: inline-block;
-    z-index: 100;
+    bottom: 7em;
+    right: -15em;
+    height: 32.5em;
+    width: 32.5em;
+    background-color: #F7F6F5;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px #c5d6eb,
+    -10px -10px 20px #ffffff;
+}
+
+.circ_im {
+    position: relative;
+    width: 26em;
+    top:3em;
+    left:3em;
+    rotate:120deg;
+    transform: rotateX(180deg);
 }

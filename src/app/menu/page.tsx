@@ -3,6 +3,8 @@
 import styles from "./page.module.css";
 import { useState, useEffect } from 'react';
 
+import cof_im from "../../../public/cofft1.png"
+
 type Coffee = {
     drink_name: string;
     allergen_info: number;
@@ -44,7 +46,7 @@ export default function Menu() {
                 </div> 
             ))}
         </div>
-        <div className={styles.circle}>a</div>
+        <div className={styles.circle}><img src={cof_im.src} className={styles.circ_im}></img></div>
     </main>
   );
 }
