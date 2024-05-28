@@ -14,7 +14,7 @@
     flex-grow: 1;
 }
 
-.ccard {
+.credit_card {
     margin-top:2em;
     height: 18em;
     width: 28.54em;
@@ -22,14 +22,29 @@
     border-radius: 1.5em;
     box-shadow: 10px 10px 20px #c5d6eb,
                -10px -10px 20px #ffffff;
-    animation: fade_ 1s forwards;
     backdrop-filter: blur(2px);
 }
 
-@keyframes fade_ {
+.credit_card_ani {
+    animation: credit_card_fade_in 1s forwards;
+}
+
+.credit_card_ani_prevqr {
+    animation: credit_card_fade_in_prevqr 2s forwards;
+}
+
+@keyframes credit_card_fade_in {
     0% { box-shadow: none; }
     100% { box-shadow: 10px 10px 20px #d6d6d6,
                       -10px -10px 20px #ffffff;}
+}
+
+@keyframes credit_card_fade_in_prevqr {
+    0% { width: 18em; }
+    25% {box-shadow: none;width: 18em;}
+    26% {width:28.54em;}
+    100% { box-shadow: 10px 10px 20px #d6d6d6,
+                      -10px -10px 20px #ffffff; width: 28.54em;}
 }
 
 .chip {
@@ -39,29 +54,56 @@
     width: 3.7em;
     border-radius: .5em;
     background-color: #EBEBEB;
-    animation: fade_in 1s forwards;
     filter: blur(2px);
 }
 
-@keyframes fade_in {
+.chip_ani {
+    animation: chip_fade_in 1s forwards;
+}
+
+.chip_ani_prevqr {
+    animation: chip_fade_in_prevqr 2s forwards;
+}
+
+@keyframes chip_fade_in {
     0% { box-shadow: none; }
     100% { box-shadow: inset 10px 10px 20px #d6d6d6,
                        inset -10px -10px 20px #ffffff; }
 }
 
-.ccard_num {
+@keyframes chip_fade_in_prevqr {
+    0% { box-shadow: none; }
+    50% { box-shadow: none; }
+    100% { box-shadow: inset 10px 10px 20px #d6d6d6,
+                       inset -10px -10px 20px #ffffff; }
+}
+
+.credit_card_num {
     color:#fff;
     margin-top: 2.1em;
     margin-left: 1.2em;
     font-size: 1.55em;
-    animation: glow 1.6s forwards;
 }
 
-@keyframes glow {
+.credit_card_num_ani {
+    animation: credit_card_num_glow 1.6s forwards;
+}
+
+.credit_card_num_ani_prevqr {
+    animation: credit_card_num_glow_prevqr 2.6s forwards;
+}
+
+@keyframes credit_card_num_glow {
     0% { color: #EBEBEB;}
     50% { color: #ebebeb;}
     100% { color: #fff;}
 }
+
+@keyframes credit_card_num_glow_prevqr { 
+    0% { color: #EBEBEB;}
+    50% { color: #ebebeb;}
+    100% { color: #fff;}
+}/*work needed*/
 
 .mc_logo{
     margin-left: 22.8em;
@@ -69,11 +111,85 @@
     width: 3.7em;
     background-image: url("../../../public/Mastercard-logo.svg");
     background-repeat: no-repeat;
-    animation: fade_in_ 1s forwards;
 }
 
-@keyframes fade_in_ {
+.mc_logo_ani {
+    animation: mc_logo_fade_in 1s forwards;
+}
+
+.mc_logo_ani_prevqr{
+    animation: mc_logo_fade_in_prevqr 2s forwards;
+}
+
+@keyframes mc_logo_fade_in {
     0% { opacity:0%;background-size: 92%;}
+    100% { opacity:100%;background-size: 95%;}
+}
+
+@keyframes mc_logo_fade_in_prevqr {
+    0% { opacity:0%;background-size: 92%;}
+    50% { opacity:0%;background-size: 92%;}
+    100% { opacity:100%;background-size: 95%;}
+}
+
+.btc_bg {
+    margin-top:2em;
+    height: 18em;
+    width: 18em;
+    background-color: #EBEBEB;
+    border-radius: 1.5em;
+    box-shadow: 10px 10px 20px #c5d6eb,
+               -10px -10px 20px #ffffff;
+    backdrop-filter: blur(2px);
+}
+
+.btc_bg_ani {
+    animation: btc_fade_in .8s forwards;
+}
+
+.btc_bg_ani_prevcr {
+    animation: btc_fade_in_prevcr 2s forwards;
+}
+
+@keyframes btc_fade_in {
+    0% { box-shadow: none; }
+    100% { box-shadow: 10px 10px 20px #d6d6d6,
+                      -10px -10px 20px #ffffff;}
+}
+
+@keyframes btc_fade_in_prevcr {
+    0% { width: 28.54em; }
+    25% {box-shadow: none;width: 28.54em;}
+    26% {width:18em;}
+    100% { box-shadow: 10px 10px 20px #d6d6d6,
+                      -10px -10px 20px #ffffff; width: 18em;}
+}
+
+.btc_qr {
+    margin:0.5em;
+    height: 18em;
+    width: 18em;
+    mix-blend-mode: darken;
+    background-image: url("../../../public/btc.png");
+    background-repeat: no-repeat;
+}
+
+.btc_qr_ani {
+    animation: btc_qr_fade_in .5s forwards;    
+}
+
+.btc_qr_ani_prevcr {
+    animation: btc_qr_fade_in_prevcr 2s forwards;
+}
+
+@keyframes btc_qr_fade_in {
+    0% { opacity:0%;background-size: 94%;}
+    100% { opacity:100%;background-size: 95%;}
+}
+
+@keyframes btc_qr_fade_in_prevcr {
+    0% { opacity:0%;background-size: 94%;}
+    50% { opacity:0%;background-size: 94%;}
     100% { opacity:100%;background-size: 95%;}
 }
 
