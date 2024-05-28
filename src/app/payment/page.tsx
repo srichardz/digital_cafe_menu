@@ -11,7 +11,7 @@ export default function Home() {
   const types_of_p = {
     0:<p className={styles.order_details}>Order details</p>/*tr.map(item => (<div className={styles.}><p className={styles.ord_line}>{item.itm}: {item.pri} EUR</p></div> ))*/,
     1:<><div className={styles.spacer}></div><div><p>Please pay at the counter named KIOSK with the following code:  #{1234}</p></div></>,
-    2:<><div className={styles.spacer}></div><div>ccard</div></>,
+    2:<><div className={styles.spacer}></div><div className={styles.ccard}><div className={styles.chip}></div><div className={styles.ccard_num}><p>0000 0000 0000 1111</p></div><div className={styles.mc_logo}></div></div></>,
     3:<><div className={styles.spacer}></div><div>btc</div></>
   }
   const [selected_payment, setSelectedPayment] = useState(types_of_p[0]);
@@ -38,6 +38,7 @@ export default function Home() {
 
   return (
     <main>
+      {/*<div className={styles.GHOST}></div>*/}
       <PgTtl />
       <div className={styles.bg}>
         {selected_payment}

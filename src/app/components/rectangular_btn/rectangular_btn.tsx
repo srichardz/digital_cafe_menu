@@ -7,9 +7,11 @@ import ytIco from "../../../../public/button_icons/yt-logo.svg";
 import cashIco from "../../../../public/button_icons/cash.svg";
 import ccardIco from "../../../../public/button_icons/cr-card.svg";
 import btcIco from "../../../../public/button_icons/btc.svg";
+import qrCode from "../../../../public/button_icons/qr_code.svg";
 
 function logo_(logo_url:number) {
     switch (logo_url) {
+        case 0: return qrCode;
         case 1: return rdIco;
         case 2: return xIco;
         case 3: return ytIco;
