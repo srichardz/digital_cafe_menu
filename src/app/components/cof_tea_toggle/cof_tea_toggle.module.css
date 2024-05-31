@@ -1,0 +1,25 @@
+.toggler {
+    align-self: center;
+    width: 100vw;
+    height: 2em;
+    text-align: center;
+    font-size: 1.15rem;
+    margin-top: 3em;
+}
+
+.l {
+    color: #716F6B;
+    padding: .3em 4em .3em 4em;
+    font-size: 0.85em;
+    text-decoration: none;
+}
+
+.l_1 {
+    border-radius: 20px 00px 0px 20px;
+    border: .2em solid #31B7D6;
+}
+
+.l_2 {
+    border-radius: 00px 20px 20px 0px;
+    border: .2em solid #d1d8e0;
+}

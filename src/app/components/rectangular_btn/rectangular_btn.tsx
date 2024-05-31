@@ -22,12 +22,12 @@ function logo_(logo_url:number) {
     }
 }
 
-const RectBtn = ({logo_url, onClick} : {logo_url : number, onClick:any}) => {
+const RectBtn = ({logo_url, onClick, theme} : {logo_url : number, onClick:any, theme:string}) => {
     const logo = logo_(logo_url)
 
     return (
         <div>
-            <button className={styles.btn} onClick={onClick} style={{backgroundImage: 'url(' + (logo.src) + ')'}}>
+            <button className={[styles.btn, theme=="light" ? styles.btn_light : styles.btn_dark].join(" ")} onClick={onClick} style={{backgroundImage: 'url(' + (logo.src) + ')'}}>
             </button>
         </div>
     )

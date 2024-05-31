@@ -4,7 +4,6 @@
 }
 
 .gradient_bg {
-    background: linear-gradient(#3584E4 0%,#EBEBEB 50%, #EBEBEB 100%);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -13,6 +12,16 @@
     align-items: center;
     padding-top:13em;
     box-sizing: border-box;
+}
+
+.gradient_bg_light {
+    background: linear-gradient(#3584E4 0%,#EBEBEB 50%, #EBEBEB 100%);
+    color:#000;
+}
+
+.gradient_bg_dark {
+    background: linear-gradient(#E76107 0%,#CA3310 26%, #282C30 50%, #282C30 100%);
+    color:#f7f6f5;
 }
 
 .title_flex {

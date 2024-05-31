@@ -9,7 +9,42 @@ import cofBr from "../../public/main_page_images/cfp1tu.png";
 import { POST, GET, CreateCoffeeDto } from "./api/coffees/route"
 import { NextRequest } from "next/server";
 
+import { useState } from 'react';
+
 export default function Home() {
+
+  //TODO: implement dark mode
+  const [theme, setTheme] = useState("light")
+
+  return (
+    <main className={styles.mn}>
+      {/*<div className={styles.GHOST}></div>*/}
+      <div className={[styles.gradient_bg, theme=="light" ? styles.gradient_bg_light : styles.gradient_bg_dark].join(" ")}>
+        <div className={styles.title_flex}>
+          <p className={styles.motto}>Specialty Coffee and Tea from all around the Earth📍</p>
+          <h1 className={styles.main_title}>Curiosity Coffee & Tea</h1>
+          <p className={styles.sub_title}>Digital Menu</p>
+        </div>
+        <div className={styles.spacer}></div>
+        <div className={styles.btn_flex}>
+          <StartOrderBtn theme={theme}/>
+        </div>
+        <div className={styles.btns_flex}>
+          <RectBtn logo_url={1} onClick={()=>console.log(0)} theme={theme}/>
+          <RectBtn logo_url={2} onClick={()=>console.log(0)} theme={theme}/>
+          <RectBtn logo_url={3} onClick={()=>console.log(0)} theme={theme}/>
+        </div>
+      </div>
+      <img src={teaBr.src} className={[styles.tea_branch,theme].join(" ")}></img>
+      <img src={cofBr.src} className={[styles.cof_branch,theme].join(" ")}></img>
+    </main>
+  );
+}
+
+
+
+
+
 
   {/*
   const createCoffeeDTO: CreateCoffeeDto = {
@@ -30,28 +65,3 @@ export default function Home() {
     }
   }
 */}
-
-  return (
-    <main className={styles.mn}>
-      {/*<div className={styles.GHOST}></div>*/}
-      <div className={styles.gradient_bg}>
-        <div className={styles.title_flex}>
-          <p className={styles.motto}>Specialty Coffee and Tea from all around the Earth📍</p>
-          <h1 className={styles.main_title}>Curiosity Coffee & Tea</h1>
-          <p className={styles.sub_title}>Digital Menu</p>
-        </div>
-        <div className={styles.spacer}></div>
-        <div className={styles.btn_flex}>
-          <StartOrderBtn/>
-        </div>
-        <div className={styles.btns_flex}>
-          <RectBtn logo_url={1} onClick={()=>console.log(0)}/>
-          <RectBtn logo_url={2} onClick={()=>console.log(0)}/>
-          <RectBtn logo_url={3} onClick={()=>console.log(0)}/>
-        </div>
-      </div>
-      <img src={teaBr.src} className={styles.tea_branch}></img>
-      <img src={cofBr.src} className={styles.cof_branch}></img>
-    </main>
-  );
-}
