@@ -4,5 +4,12 @@
     font-size: 1.15rem;
     padding-top: 0.5em;
     position: fixed;
+}
+
+.c {
     color: #716F6B;
+}
+
+.t {
+    color: #ffffff;
 }

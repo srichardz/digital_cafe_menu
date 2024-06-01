@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import PgTtl from "../components/page_title/page_title";
 
 import cof_im from "../../../public/cofft1.png"
-import tea_im from "../../../public/cofft1.png"
+import tea_im from "../../../public/tea.png"
 import lvrmcs from "../../../public/loveramics.webp"
 
 type Coffee = {
@@ -20,6 +20,7 @@ export default function Menu() {
     const [teas, setTeas] = useState<any[]>([]);
     const [selector, setSelector] = useState(true);
     const [error, setError] = useState(null);
+    const [loaded, setLoaded] = useState(false);
     
     useEffect(() => {
         async function fetchData() {
@@ -36,6 +37,9 @@ export default function Menu() {
                 //}
 
                 const cof_result = await cof_response.json();
+                if(await cof_result) {
+                    setLoaded(true)
+                }
                 setCoffees(cof_result.data);
                 setTeas(cof_result.data)
                 //const tea_result = await tea_response.json();
@@ -51,9 +55,10 @@ export default function Menu() {
     
     return (
     <main>
-        {<div className={styles.GHOST}></div>}
+        {/*<div className={styles.GHOST}></div>*/}
+        {loaded ? <></> : <div className={styles.loading}><span className={styles.loading_sp}>ph</span></div>}        
         <div className={[styles.bg, selector ? styles.bg_cof : styles.bg_tea].join(" ")}>
-            <PgTtl />
+            <PgTtl mode_={selector}/>
             <button onClick={()=>setSelector(!selector)} className={styles.bbb}>bb</button>
             <div className={styles.spacer}></div>
             {coffees.map(item => ( 
