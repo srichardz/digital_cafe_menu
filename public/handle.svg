@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.823275mm"
+   height="17.03857mm"
+   viewBox="0 0 16.823275 17.03857"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient5921">
+      <stop
+         style="stop-color:#3f2211;stop-opacity:1"
+         offset="0"
+         id="stop5917" />
+      <stop
+         style="stop-color:#ae784f;stop-opacity:1"
+         offset="0.26368728"
+         id="stop10125" />
+      <stop
+         style="stop-color:#c18251;stop-opacity:1"
+         offset="0.34860197"
+         id="stop7691" />
+      <stop
+         style="stop-color:#a66e44;stop-opacity:1"
+         offset="0.49951294"
+         id="stop10319" />
+      <stop
+         style="stop-color:#3f2211;stop-opacity:1"
+         offset="1"
+         id="stop5919" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient5921"
+       id="linearGradient6631"
+       x1="153.16025"
+       y1="121.74996"
+       x2="169.66545"
+       y2="121.72714"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-152.97458,-113.20777)">
+    <path
+       style="fill:url(#linearGradient6631);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:1"
+       d="m 159.13278,130.01162 4.74444,0.10239 c 0,0 1.36612,-0.0349 1.43413,-0.64919 0.068,-0.6143 -0.20402,-2.96914 1.40013,-5.35886 1.60414,-2.38972 2.46022,-2.59449 2.90226,-4.91558 0.44205,-2.32109 -2.08219,-4.30127 -2.56023,-4.60842 -0.47804,-0.30715 -1.91218,-1.19486 -3.92636,-1.22861 -2.01418,-0.0338 -3.44832,10e-4 -4.02837,0.0686 -0.58005,0.0675 -3.10828,0.37353 -5.08646,2.69575 -1.97819,2.32221 -0.10201,5.18897 -0.10201,5.18897 0,0 2.32221,2.3886 2.86826,4.43741 0.54605,2.04881 0.71606,3.48219 0.71606,3.48219 0,0 0.20402,0.85395 1.63815,0.78532 z"
+       id="path3854" />
+  </g>
+</svg>

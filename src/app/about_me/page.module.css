@@ -1,0 +1,33 @@
+.bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: #091921;
+}
+
+.c1 {
+    background: linear-gradient(#ff5858, #ff990f);
+    filter: blur(2px);
+    height: 20em;
+    width: 20em;
+    border-radius: 100%;
+}
+
+.c2 {
+    background: linear-gradient(#45056e, #8dcbff);
+    filter: blur(2px);
+    height: 20em;
+    width: 20em;
+    margin: 15em;
+    border-radius: 100%;
+}
+
+.card {
+    position: absolute;
+    top:0%;
+    left: 0%;
+    background: linear-gradient(#fff, #f7f7f7);
+    border: 0.1em solid #fff;
+    backdrop-filter: blur(2px);
+    height: 80%;
+    width: 80%;
+}

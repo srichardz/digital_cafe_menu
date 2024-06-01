@@ -56,7 +56,7 @@ export default function Menu() {
     return (
     <main>
         {/*<div className={styles.GHOST}></div>*/}
-        {loaded ? <></> : <div className={styles.loading}><span className={styles.loading_sp}>ph</span></div>}        
+        {loaded ? <></> : <div className={styles.loading}><div className={styles.loading_container}><div className={styles.grinder_body}><div className={styles.grip}/><div className={styles.dial}/><div className={styles.plastic}/><div className={styles.handle_start}></div><div className={styles.path}/><div className={styles.handle_r}><div className={styles.moveY}><div className={styles.handle_h}/></div></div></div></div></div>}        
         <div className={[styles.bg, selector ? styles.bg_cof : styles.bg_tea].join(" ")}>
             <PgTtl mode_={selector}/>
             <button onClick={()=>setSelector(!selector)} className={styles.bbb}>bb</button>
