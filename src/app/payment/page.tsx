@@ -57,9 +57,9 @@ export default function Home() {
         <p className={styles.order_conf_text}>Please select payment type!</p>
         <p className={styles.order_conf_text} onClick={() => btn_handler("order_details")}>Total: {0} EUR</p>
         <div className={styles.btns_flex}>
-          <RectBtn logo_url={4} onClick={() => btn_handler("cash_")}/>
-          <RectBtn logo_url={5} onClick={() => btn_handler("ccard_")}/>
-          <RectBtn logo_url={6} onClick={() => btn_handler("btc_")}/>
+          <RectBtn logo_url={4} onClick={() => btn_handler("cash_")} theme={""}/>
+          <RectBtn logo_url={5} onClick={() => btn_handler("ccard_")} theme={""}/>
+          <RectBtn logo_url={6} onClick={() => btn_handler("btc_")} theme={""}/>
         </div>
       </div>
     </main>
