@@ -9,13 +9,15 @@ import cof_im from "../../../public/cofft1.png"
 import tea_im from "../../../public/tea.png"
 import lvrmcs from "../../../public/loveramics.webp"
 
-
+import Link from 'next/link';
 
 type Coffee = {
     drink_name: string;
     allergen_info: number;
     price: number;
     description: string;
+    image: string;
+    type: string;  // Add this line to the type definition
 }
 
 export default function Menu() {
@@ -41,11 +43,13 @@ export default function Menu() {
                 //}
 
                 const cof_result = await cof_response.json();
+
                 if(await cof_result) {
                     setLoaded(true)
                 }
-                setCoffees(cof_result.data);
-                setTeas(cof_result.data)
+
+                setCoffees(cof_result.data.filter((item: Coffee) => item.type === 'cof'));
+                setTeas(cof_result.data.filter((item: Coffee) => item.type === 'tea'));
                 //const tea_result = await tea_response.json();
                 //setTeas(cof_result.data);
 
@@ -57,6 +61,10 @@ export default function Menu() {
         fetchData();
     }, []);
     
+    const ref = selector ? coffees : teas;
+
+    const itm_enc = (item:any) => {return encodeURIComponent(JSON.stringify(item))}
+
     return (
     <main>
         {/*<div className={styles.GHOST}></div>*/}
@@ -65,9 +73,10 @@ export default function Menu() {
             <PgTtl mode_={selector}/>
             <button onClick={()=>setSelector(!selector)} className={styles.selector_btn}>bb</button>
             <div className={styles.spacer}></div>
-            {coffees.map(item => ( 
+            {ref.map(item => ( 
                 <div key={item.drink_name} className={[styles.cof, selector ? styles.cof_cof : styles.cof_tea].join(" ")}>
-                    <button className={[styles.more, selector ? styles.more_cof : styles.more_tea].join(" ")}>...</button>
+                    
+                    <Link href={{ pathname: "/drink_details", query: { itm: itm_enc(item) } }} className={[styles.more, selector ? styles.more_cof : styles.more_tea].join(" ")} onClick={() => console.log('working')}>...</Link>
                     <h1 className={styles.coffee_name}>{item.drink_name}</h1>
                     <p className={styles.coffee_desc}>{item.description}</p>
                 </div>
