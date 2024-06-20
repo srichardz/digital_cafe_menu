@@ -55,7 +55,6 @@ export default function Menu() {
 
     return (
     <main>
-        <Suspense fallback={<></>}>
         <div className={styles.bg}>
             
             <div ref={boxRefs[0]} className={[styles.hl, styles.hl1].join(" ")}>
@@ -88,7 +87,6 @@ export default function Menu() {
                 {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
             </div>
         </div>
-        </Suspense>
     </main>
   );
 }

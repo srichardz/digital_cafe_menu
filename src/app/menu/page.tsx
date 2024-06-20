@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import PgTtl from "../components/page_title/page_title";
 import LoadingScrnGrn from "../components/loading_screen_grinder/loading_screen_grinder";
 
@@ -76,7 +76,7 @@ export default function Menu() {
             {ref.map(item => ( 
                 <div key={item.drink_name} className={[styles.cof, selector ? styles.cof_cof : styles.cof_tea].join(" ")}>
                     
-                    <Link href={{ pathname: "/drink_details", query: { itm: itm_enc(item) } }} className={[styles.more, selector ? styles.more_cof : styles.more_tea].join(" ")} onClick={() => console.log('working')}>...</Link>
+                    <Suspense><Link href={{ pathname: "/drink_details", query: { itm: itm_enc(item) } }} className={[styles.more, selector ? styles.more_cof : styles.more_tea].join(" ")} onClick={() => console.log('working')}>...</Link></Suspense>
                     <h1 className={styles.coffee_name}>{item.drink_name}</h1>
                     <p className={styles.coffee_desc}>{item.description}</p>
                 </div>
