@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useState, useEffect, useRef, Suspense} from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import PgTtl from "../components/page_title/page_title";
 import { useSearchParams } from 'next/navigation'
 import marocchino_im from "../../../public/marocchino.png";
@@ -16,7 +16,7 @@ type Coffee = {
     description: string;
 }
 
-export default function Menu() {
+function Menu() {
     const [selector, setSelector] = useState(true);
     
     const [item, setItem] = useState<any>();
@@ -89,4 +89,14 @@ export default function Menu() {
         </div>
     </main>
   );
+}
+
+export default function MenuC() {
+    return (
+        <main>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Menu />
+            </Suspense>
+        </main>
+    );
 }
