@@ -9,7 +9,7 @@ import cofBr from "../../public/main_page_images/cfp1tu.png";
 import { POST, GET, CreateCoffeeDto } from "./api/coffees/route"
 import { NextRequest } from "next/server";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
 
@@ -19,8 +19,11 @@ export default function Home() {
   const [pressedX, setPressedX] = useState(false)
   const [pressedY, setPressedY] = useState(false)
 
-  const [suggestion_tapped, setSug] = useState((window.innerWidth>550 && window.innerWidth<900)?true:false);
-  
+  let bb = false;
+  useEffect(()=>{bb = (window.innerWidth>550 && window.innerWidth<900)?true:false})
+
+  const [suggestion_tapped, setSug] = useState(bb);
+
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
