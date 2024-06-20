@@ -4,6 +4,7 @@
     font-size: 1.15rem;
     padding-top: 0.5em;
     position: fixed;
+    transition: color 1s ease-in-out;
 }
 
 .c {

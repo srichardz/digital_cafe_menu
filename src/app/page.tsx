@@ -15,10 +15,18 @@ export default function Home() {
 
   //TODO: implement dark mode
   const [theme, setTheme] = useState("light")
+  const [pressedR, setPressedR] = useState(false)
+  const [pressedX, setPressedX] = useState(false)
+  const [pressedY, setPressedY] = useState(false)
 
+  const [suggestion_tapped, setSug] = useState((window.innerWidth>550 && window.innerWidth<900)?true:false);
+  
   return (
     <main className={styles.mn}>
       {/*<div className={styles.GHOST}></div>*/}
+      {suggestion_tapped? <></> : <div className={styles.size_suggestion} onClick={()=>setSug(true)}>
+            <span><p style={{color: "#aa0000", textAlign:"center"}}>Attention!</p>This site was designed for and tested on smaller tablets only, experience on other devices may vary, as you will have a less polished view of the app. Tap anywhere to dismiss this message.</span>
+      </div>}
       <div className={[styles.gradient_bg, theme=="light" ? styles.gradient_bg_light : styles.gradient_bg_dark].join(" ")}>
         <div className={styles.title_flex}>
           <p className={styles.motto}>Specialty Coffee and Tea from all around the Earth📍</p>
@@ -30,9 +38,9 @@ export default function Home() {
           <StartOrderBtn theme={theme}/>
         </div>
         <div className={styles.btns_flex}>
-          <RectBtn logo_url={1} onClick={()=>console.log(0)} theme={theme}/>
-          <RectBtn logo_url={2} onClick={()=>console.log(0)} theme={theme}/>
-          <RectBtn logo_url={3} onClick={()=>console.log(0)} theme={theme}/>
+          <RectBtn logo_url={pressedR ? 7 : 1} onClick={()=>{setPressedR(true);setPressedX(false);setPressedY(false)}} theme={theme}/>
+          <RectBtn logo_url={pressedX ? 8 : 2} onClick={()=>{setPressedR(false);setPressedX(true);setPressedY(false)}} theme={theme}/>
+          <RectBtn logo_url={pressedY ? 9 : 3} onClick={()=>{setPressedR(false);setPressedX(false);setPressedY(true)}} theme={theme}/>
         </div>
       </div>
       <img src={teaBr.src} className={[styles.tea_branch,theme].join(" ")}></img>

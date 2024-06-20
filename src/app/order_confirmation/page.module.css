@@ -1,0 +1,24 @@
+.bg {
+    background-color: #EBEBEB;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.spacer {
+    display: flex;
+    flex-grow: 1;
+}
+
+.order_conf_text {
+    font-size: 1.5rem;
+    width: 80vw;
+    font-weight: 600;
+    justify-content:space-between;
+    text-align: center;
+    color: #909090;
+}

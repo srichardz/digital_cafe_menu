@@ -8,6 +8,11 @@ import cashIco from "../../../../public/button_icons/cash.svg";
 import ccardIco from "../../../../public/button_icons/cr-card.svg";
 import btcIco from "../../../../public/button_icons/btc.svg";
 import qrCode from "../../../../public/button_icons/qr_code.svg";
+// TODO: replace ph qr with actual ones, make them bigger and maybe a fade-in would be nice too
+import rdQr from "../../../../public/button_icons/qr_code.svg";
+import xQr from "../../../../public/button_icons/qr_code.svg";
+import ytQr from "../../../../public/button_icons/qr_code.svg";
+
 
 function logo_(logo_url:number) {
     switch (logo_url) {
@@ -18,6 +23,9 @@ function logo_(logo_url:number) {
         case 4: return cashIco;
         case 5: return ccardIco;
         case 6: return btcIco;
+        case 7: return rdQr;
+        case 8: return xQr;
+        case 9: return ytQr;
         default: return rdIco;
     }
 }

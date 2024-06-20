@@ -3,10 +3,13 @@
 import styles from "./page.module.css";
 import { useState, useEffect } from 'react';
 import PgTtl from "../components/page_title/page_title";
+import LoadingScrnGrn from "../components/loading_screen_grinder/loading_screen_grinder";
 
 import cof_im from "../../../public/cofft1.png"
 import tea_im from "../../../public/tea.png"
 import lvrmcs from "../../../public/loveramics.webp"
+
+
 
 type Coffee = {
     drink_name: string;
@@ -21,6 +24,7 @@ export default function Menu() {
     const [selector, setSelector] = useState(true);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
+
     
     useEffect(() => {
         async function fetchData() {
@@ -56,14 +60,14 @@ export default function Menu() {
     return (
     <main>
         {/*<div className={styles.GHOST}></div>*/}
-        {loaded ? <></> : <div className={styles.loading}><div className={styles.loading_container}><div className={styles.grinder_body}><div className={styles.grip}/><div className={styles.dial}/><div className={styles.plastic}/><div className={styles.handle_start}></div><div className={styles.path}/><div className={styles.handle_r}><div className={styles.moveY}><div className={styles.handle_h}/></div></div></div></div></div>}        
+        {loaded?<></>:<LoadingScrnGrn/>}
         <div className={[styles.bg, selector ? styles.bg_cof : styles.bg_tea].join(" ")}>
             <PgTtl mode_={selector}/>
-            <button onClick={()=>setSelector(!selector)} className={styles.bbb}>bb</button>
+            <button onClick={()=>setSelector(!selector)} className={styles.selector_btn}>bb</button>
             <div className={styles.spacer}></div>
             {coffees.map(item => ( 
                 <div key={item.drink_name} className={[styles.cof, selector ? styles.cof_cof : styles.cof_tea].join(" ")}>
-                    <div className={styles.more}>...</div>
+                    <button className={[styles.more, selector ? styles.more_cof : styles.more_tea].join(" ")}>...</button>
                     <h1 className={styles.coffee_name}>{item.drink_name}</h1>
                     <p className={styles.coffee_desc}>{item.description}</p>
                 </div>

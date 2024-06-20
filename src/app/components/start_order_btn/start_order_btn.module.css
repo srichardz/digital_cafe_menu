@@ -27,7 +27,7 @@
                  -10px -10px 20px #ffffff;
     animation: test_an 15s ease infinite;
 }
-
+/*TODO: check naming*/
 @keyframes test_an
 {
     0% { background-position: 0% 50%; }
@@ -45,5 +45,13 @@
                 inset -10px -10px 20px #ffffff;
 }
 
-
+@media only screen and (max-width: 549px) {
+    .btn {
+        width:15em;
+        font-size: 1.6rem;
+        border-radius: 23px;
+        padding-left: 2.75em;
+        padding-right: 2.75em;
+    }
+}
 

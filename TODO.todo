@@ -1,0 +1,29 @@
+page.tsx
+! Replace ph qrs, make them bigger, fade-in
+
+grinder loading screen
+- add fun text under grinder
+
+Menu
+! toggle styling
+! fill db with drinks
+- toggle between coffee and tea
+
+Customize drink
+! whole page
+
+Payment
+! order details in db
+- cash payment art, styling
+- more card animations
+! order conformation
+
+After payment
+- coffee blog whole
+
+Misc
+- coffee brewing loading screen?
+- filter coffee dripping loading screen?
+- lang?
+- dark mode??
+- css media queries
