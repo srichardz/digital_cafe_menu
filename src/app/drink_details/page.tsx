@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useState, useEffect, useRef} from 'react';
+import { useState, useEffect, useRef, Suspense} from 'react';
 import PgTtl from "../components/page_title/page_title";
 import { useSearchParams } from 'next/navigation'
 import marocchino_im from "../../../public/marocchino.png";
@@ -55,6 +55,7 @@ export default function Menu() {
 
     return (
     <main>
+        <Suspense fallback={<></>}>
         <div className={styles.bg}>
             
             <div ref={boxRefs[0]} className={[styles.hl, styles.hl1].join(" ")}>
@@ -64,10 +65,21 @@ export default function Menu() {
                 {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
             </div>
             <div ref={boxRefs[1]} className={[styles.hl, styles.hl2].join(" ")}>
-                {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
-                {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
-                <p className={styles.item_info}>Allergens:</p>
-                {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
+                <p>Milk options</p>
+                <div className={styles.o_container}>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                </div>
+                <p>Roast and origin</p>
+                <div className={styles.o_container}>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                    <div className={styles.option}></div>
+                </div>
+                <p>Roast</p>
             </div>
             <div ref={boxRefs[2]} className={[styles.hl, styles.hl3].join(" ")}>
                 {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
@@ -76,6 +88,7 @@ export default function Menu() {
                 {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
             </div>
         </div>
+        </Suspense>
     </main>
   );
 }

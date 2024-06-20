@@ -19,7 +19,7 @@
                       -40px -40px 80px #ffffff;
     animation: fade-in 2s linear;
     display: flex;
-    justify-content: center;
+
     flex-direction: column;
     margin-right: 1.5em;
     transition: transform 0.1s ease-in-out;
@@ -35,7 +35,7 @@
 .im {
     position: relative;
     height: 25em;
-    top: -15em;
+    top: -7em;
     animation: im-fade-in 1.8s ease-in-out;
 }
 
@@ -46,7 +46,7 @@
 
 .item_info {
     position: relative;
-    top: -7em;
+    top: -3em;
     text-align: center;
     font-size: 2em;
     font-weight: 300;
@@ -61,6 +61,28 @@
     transform: scale(1); /* Grow to full size */
 }
 
+.hl2 {
+    align-items:center;
+}
+
 .hl3 {
     margin-right: 6em;
+}
+
+.o_container {
+    display: flex;
+    width: 60vw;
+    height: 5em;
+    background-color: aquamarine;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.option {
+    background-color: aqua;
+    width: 3em;
+    height: 3em;
+    content:" ";
+    border-radius: 100%;
 }
