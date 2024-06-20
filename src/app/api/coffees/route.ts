@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export type CreateCoffeeDto = {
     drink_name: string;
-    allergen_info: number;
+    allergen_info: string;
     price: number;
     description: string;
 }

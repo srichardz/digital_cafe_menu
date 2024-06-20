@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 type Coffee = {
     drink_name: string;
-    allergen_info: number;
+    allergen_info: string;
     price: number;
     description: string;
     image: string;

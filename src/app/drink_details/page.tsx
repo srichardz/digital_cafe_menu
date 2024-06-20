@@ -1,9 +1,13 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import PgTtl from "../components/page_title/page_title";
 import { useSearchParams } from 'next/navigation'
+import marocchino_im from "../../../public/marocchino.png";
+import Link from "next/link";
+
+const images: any = {marocchino_im: marocchino_im}
 
 type Coffee = {
     drink_name: string;
@@ -14,10 +18,10 @@ type Coffee = {
 
 export default function Menu() {
     const [selector, setSelector] = useState(true);
-
-    const [item, setItem] = useState(null);
+    
+    const [item, setItem] = useState<any>();
     const searchParams = useSearchParams();
-
+    
     useEffect(() => {
         const itm = searchParams.get('itm');
         if (itm) {
@@ -25,11 +29,53 @@ export default function Menu() {
             setItem(parsedItem);
         }
     }, [searchParams]);
+
+    const boxRefs = [useRef<HTMLDivElement>(null),useRef<HTMLDivElement>(null),useRef<HTMLDivElement>(null)];
     
+    useEffect(() => {
+        const checkVisibility = setInterval(() => {
+            boxRefs.forEach(elem => {
+                if (elem.current) {
+                    const rect = elem.current.getBoundingClientRect();
+                    const fullyInView =
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+                    if (fullyInView) {
+                        elem.current.classList.add(styles.grow);
+                    } else {
+                    elem.current.classList.remove(styles.grow);
+                }    
+                };
+            });
+            
+        }, 10);
+    }, []);
+
     return (
     <main>
-        <PgTtl mode_={selector}/>
-        <div className={styles.spacer}></div>
+        <div className={styles.bg}>
+            
+            <div ref={boxRefs[0]} className={[styles.hl, styles.hl1].join(" ")}>
+                {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
+                {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
+                <p className={styles.item_info}>Allergens:</p>
+                {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
+            </div>
+            <div ref={boxRefs[1]} className={[styles.hl, styles.hl2].join(" ")}>
+                {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
+                {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
+                <p className={styles.item_info}>Allergens:</p>
+                {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
+            </div>
+            <div ref={boxRefs[2]} className={[styles.hl, styles.hl3].join(" ")}>
+                {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
+                {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
+                <p className={styles.item_info}>Allergens:</p>
+                {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
+            </div>
+        </div>
     </main>
   );
 }

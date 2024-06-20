@@ -1,270 +1,66 @@
 .bg {
     position: fixed;
     height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: color 1s ease-in-out;
+    align-items: center;
+    background-color: #ECECEC;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
-.bg_cof {
-    animation: bg_tea-to-cof 1s ease-out;
-    background-color: #ebebeb;
+.hl {
+    background-color: #EBEBEB;
+    width: 60vw;
+    height: 70vh;
+    content:" ";
+    border-radius: 3em;
+    box-shadow: 40px 40px 80px #d6d6d6,
+                      -40px -40px 80px #ffffff;
+    animation: fade-in 2s linear;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 1.5em;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(0.85); /* Default to 75% size */
+}
+
+@keyframes fade-in {
+    0% {box-shadow: none};
+    100% {box-shadow: 40px 40px 80px #d6d6d6,
+        -40px -40px 80px #ffffff;};
+}
+
+.im {
+    position: relative;
+    height: 25em;
+    top: -15em;
+    animation: im-fade-in 1.8s ease-in-out;
+}
+
+@keyframes im-fade-in {
+    0% {opacity:0%;};
+    100% {opacity:100%;};
+}
+
+.item_info {
+    position: relative;
+    top: -7em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
     color: #716F6B;
 }
 
-@keyframes bg_tea-to-cof {
-    0%{background-color: #E01B24;}
-    100%{background-color: #ebebeb;}
+.hl1 {
+    margin-left: 8em;
+}
+  
+.grow {
+    transform: scale(1); /* Grow to full size */
 }
 
-.bg_tea {
-    animation: bg_cof-to-tea 1s ease-out;
-    background-color: #E01B24;
-    color: #FFFFFF;
-}
-
-@keyframes bg_cof-to-tea {
-    0%{background-color: #ebebeb;}
-    100%{background-color: #E01B24;}
-}
-.spacer {
-    width: 100vw;
-    padding-top:2em;
-}
-
-.cof {
-    position:relative;
-    width: 40vw;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-left: 0.3em;
-    padding:1em;
-    padding-top:0em;
-    right:0vw;
-}
-
-.cof_cof {
-    animation: its_cof-to-tea .8s ease-out;
-}
-
-@keyframes its_cof-to-tea {
-    0%{right:-50vw;}
-    100%{right:0vw;}
-}
-
-.cof_tea {
-    animation: its_tea-to-cof .8s ease-out;
-    right:-50vw;
-}
-
-@keyframes its_tea-to-cof {
-    0%{right:0vw;}
-    100%{right:-50vw;}
-}
-
-.more {
-    position:relative;
-    float: right;
-    font-size: 1.5em;
-    margin: -0.35em;
-    margin-right: -2.5em;
-    margin-top: 0em;
-    border-radius: .8em;
-    border:none;
-    height: 2em;
-    width: 2em;
-    text-align: center;
-    transition: all 1s ease-out;
-}
-
-.more_cof:active {
-    box-shadow: inset 10px 10px 20px #c5d6eb,
-                inset -10px -10px 20px #ffffff;
-}
-
-.more_tea:active {
-    box-shadow: inset 10px 10px 20px #87151A,
-                inset -10px -10px 20px #FF424B;
-}
-
-.more_cof {
-    background-color: #ebebeb;
-    box-shadow: 10px 10px 20px #c5d6eb,
-    -10px -10px 20px #ffffff;
-    color: #777;
-}
-
-.more_tea {
-    background-color: #E01B24;
-    box-shadow: 10px 10px 20px #87151A,
-    -10px -10px 20px #FF424B;
-    color: #fff;
-}
-
-.coffee_name {
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-
-.coffee_desc {
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-
-.GHOST {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../../public/coffee.png");
-    background-size: 100%;
-    z-index: 100;
-    touch-action: none;
-    opacity: 0%;
-
-}
-
-.GHOST:hover {
-    opacity: 60%;
-
-}
-
-.circle {
-    position: absolute;
-    bottom: 7em;
-    height: 32.5em;
-    width: 32.5em;
-    border-radius: 50%;
-    box-shadow: 10px 10px 20px #c5d6eb,
-    -10px -10px 20px #fff;
-}
-
-.circle_cof {
-    animation: move_tea-to-cof .8s ease-out;
-    box-shadow: 10px 10px 20px #c5d6eb,
-    -10px -10px 20px #fff;
-    right: -15em;
-}
-
-@keyframes move_tea-to-cof {
-    0%{right: 20em; box-shadow: 10px 10px 20px #87151A,
-        -10px -10px 20px #FF424B;}
-    100%{right: -15em; box-shadow: 10px 10px 20px #c5d6eb,
-        -10px -10px 20px #fff;}
-}
-
-.circle_tea {
-    right: 20em;
-    animation: move_cof-to-tea .8s ease-out;
-    box-shadow: 10px 10px 20px #87151A,
-    -10px -10px 20px #FF424B;
-}
-
-/*TODO:selector*/
-.selector_btn {
-    align-self: center;
-    margin-top:4em;
-
-}
-
-@keyframes move_cof-to-tea {
-    0%{right: -15em;    box-shadow: 10px 10px 20px #c5d6eb,
-        -10px -10px 20px #fff;}
-    100%{right: 20em;    box-shadow: 10px 10px 20px #87151A,
-        -10px -10px 20px #FF424B;}
-}
-
-.circ_im {
-    position: relative;
-    width: 26em;
-    top:3em;
-    left:3em;
-    rotate:120deg;
-    transform: rotateX(180deg);
-    /*border: 0.1em solid #31B7D6;*/
-    box-shadow: inset 0px 0px 40px #31b7d6;
-    border-radius: 26em;
-}
-
-@media only screen and (max-width: 549px) {
-    .cof {
-        width: 50vw;
-    }
-
-    .circle {
-        bottom: 3em;
-        height: 15em;
-        width: 15em;
-    }
-
-    .circle_cof {
-        right: -6em;
-    }
-
-    .circ_im {
-        width: 13em;
-        top:1em;
-        left:1em;
-    }
-
-    .more {
-        font-size: 1.2em;
-        border-radius: .5em;
-        height: 1.5em;
-        width: 1.5em;
-    }
-
-    @keyframes move_tea-to-cof {
-        0%{right: 16em; box-shadow: 10px 10px 20px #87151A,
-            -10px -10px 20px #FF424B;}
-        100%{right: -6em; box-shadow: 10px 10px 20px #c5d6eb,
-            -10px -10px 20px #fff;}
-    }
-
-    .circle_tea {
-        right: 16em;
-        animation: move_cof-to-tea .8s ease-out;
-        box-shadow: 10px 10px 20px #87151A,
-        -10px -10px 20px #FF424B;
-    }
-
-    @keyframes move_cof-to-tea {
-        0%{right: -6em;    box-shadow: 10px 10px 20px #c5d6eb,
-            -10px -10px 20px #fff;}
-        100%{right: 16em;    box-shadow: 10px 10px 20px #87151A,
-            -10px -10px 20px #FF424B;}
-    }
-    .cof_tea {
-        animation: its_tea-to-cof .8s ease-out;
-        right:-30vw;
-    }
-    
-    @keyframes its_tea-to-cof {
-        0%{right:0vw;}
-        100%{right:-30vw;}
-    }
-}
-
-@media only screen and (max-width: 374px) {
-    .circle {
-        display:none;
-    }
-    .cof {
-        width: 80vw;
-    }
-
-    .cof_tea {
-        animation: its_tea-to-cof .8s ease-out;
-        right:-5vw;
-    }
-    
-    @keyframes its_tea-to-cof {
-        0%{right:0vw;}
-        100%{right:-5vw;}
-    }
+.hl3 {
+    margin-right: 6em;
 }
