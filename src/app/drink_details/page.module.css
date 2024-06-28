@@ -51,6 +51,9 @@
     font-size: 2em;
     font-weight: 300;
     color: #716F6B;
+    width: 60%;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 .hl1 {
@@ -73,16 +76,44 @@
     display: flex;
     width: 60vw;
     height: 5em;
-    background-color: aquamarine;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
 }
 
 .option {
-    background-color: aqua;
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     content:" ";
     border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cust_text {
+    font-size: 1.6em;
+    padding: 1em;
+    width: 100%;
+}
+
+.milk {
+    background-image: url("../../../public/lactose.png");
+}
+
+.lacfree {
+    background-image: url("../../../public/lactose_free.png");
+}
+
+.coconm {
+    background-image: url("../../../public/coco.png");
+}
+
+.almonm {
+    background-image: url("../../../public/almond.png");
+}
+
+.br {
+    background-image: url("../../../public/brazil.svg");
+    background-size: cover;
+    background-position: -.8em;
 }

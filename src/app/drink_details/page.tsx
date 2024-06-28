@@ -60,30 +60,26 @@ function Menu() {
             <div ref={boxRefs[0]} className={[styles.hl, styles.hl1].join(" ")}>
                 {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
                 {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
-                <p className={styles.item_info}>Allergens:</p>
+                <p className={styles.item_info}>Allergens: Hazelnut, milk</p>
                 {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
             </div>
             <div ref={boxRefs[1]} className={[styles.hl, styles.hl2].join(" ")}>
-                <p>Milk options</p>
+                <p className={styles.cust_text}>Milk options</p>
                 <div className={styles.o_container}>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
+                    <div className={[styles.option, styles.milk].join(" ")}></div>
+                    <div className={[styles.option, styles.lacfree].join(" ")}></div>
+                    <div className={[styles.option, styles.coconm].join(" ")}></div>
+                    <div className={[styles.option, styles.almonm].join(" ")}></div>
                 </div>
-                <p>Roast and origin</p>
+                <p className={styles.cust_text}>Roast and origin</p>
                 <div className={styles.o_container}>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
-                    <div className={styles.option}></div>
+                    <Link href={{ pathname: "/payment", query: {} }} className={[styles.option, styles.br].join(" ")}/>
                 </div>
-                <p>Roast</p>
+                <p>Medium Roast</p>
             </div>
             <div ref={boxRefs[2]} className={[styles.hl, styles.hl3].join(" ")}>
                 {item ? <img className={styles.im} src={images[item.image].src}></img> : <></>}
-                {item ? <p className={styles.item_info}>{item.drink_name}</p> : <></>}
-                <p className={styles.item_info}>Allergens:</p>
+                <p className={styles.item_info}>Wip</p>
                 {item ? <p className={styles.item_info}>{item.allergen_info}</p> : <></>}
             </div>
         </div>

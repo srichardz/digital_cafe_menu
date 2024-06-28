@@ -20,7 +20,7 @@ export default function Home() {
   const [pressedY, setPressedY] = useState(false)
 
   let bb = false;
-  useEffect(()=>{bb = (window.innerWidth>550 && window.innerWidth<900)?true:false})
+  useEffect(()=>{bb = (window.innerWidth>600 && window.innerWidth<960)?true:false})
 
   const [suggestion_tapped, setSug] = useState(bb);
 
