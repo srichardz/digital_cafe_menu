@@ -1,36 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Cafe digital menu proof of concept
+This project aims to visualize an idea of a service for such cafés that minimize human interaction, and are 
+productivity oriented. The idea is that instead of kiosks, which require large hardware made in small batches, 
+thus tend to be rather expensive, this webapp could be ran on for example {fruit company tablet} mini or equivalent. 
+This reduces costs while making UX a whole lot better and it would also make ordering from table possible. \
+Another core idea (which primarily makes this service unviable in real buisnesses as there are no data to collect about consumers)
+is that there are no user accounts, no downloading apps required on user side and payment can be tap to pay via nfc, since most 
+devices support that nowadays. This makes the ordering process extremely streamlined. The app also contains a coffee and tea wiki 
+with the most interesting facts about what makes specialty coffee stand out, so there is something to do (optional) while waiting 
+for the order. \
+The ui design uses elements mostly from neumorphism and techwise it utilizes the MERN stack. MongoDB is provided via cloud, the app 
+is hosted on vercel. It was done for a university project, tho the idea existed in my head before that aswell.
